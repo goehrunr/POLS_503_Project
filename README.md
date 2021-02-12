@@ -1,10 +1,9 @@
 # POLS_501_Project
 This is the data and R markdown file for the final project completed for Quantitative Research Methods
 
-# Ryan Goehrung - Final Project - Women Combatant's
+# Ryan Goehrung - Final Project
 
-# Title
-Women as Peacemakers? Analyzing the Extent of Women's Armed Combat Role in Civil Conflicts
+# Title Women as Peacemakers? Analyzing the Extent of Women's Armed Combat Role in Civil Conflicts
 
 In this repository is all necessry files to reproduce the analysis of an original data set on women's roles in 170 non-state armed groups engaged in civil war against state governments across the globe from 1943 to 2017. Most importantly is the original dataset itself as a csv file and an r-markdown document containing all necessary instructions for reproduction as well as interpretation and analysis of the data and results.
 
