@@ -9,7 +9,7 @@ In this repository is all necessry files to reproduce the analysis of an origina
 
 # Dependencies
 
-In order to rund this analysis, both the tidyverse and readr packages are required. Instructions to run the libraries are included in the r-markdown document, but both should be installed beforehand.
+In order to run this analysis, both the tidyverse and readr packages are required. Instructions to run the libraries are included in the r-markdown document, but both should be installed beforehand.
 ```
 packages_used <- c("tidyverse", "readr")
 install.packages(packages_used)
