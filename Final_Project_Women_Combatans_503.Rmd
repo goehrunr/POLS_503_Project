@@ -1,0 +1,339 @@
+---
+title: "Final Project Women Combatants"
+author: "Ryan Goehrung"
+date: "06/07/2018"
+output: html_document
+---
+
+
+**Introduction**
+
+Over the past few years there have been a number of sensationalized news articles about women warriors. In 2016 there were dozens of stories about the all-woman Kurdish unit in Syria fighting ISIS striking fear into the hearts of patriarchal ISIS soldiers. Similarly, stories of Colonel "Black Diamond," who was 18 when Charles Taylor's forces killed her parents and brutally raped her in the course of Liberia's civil war. She went on to join the Liberians United for Reconciliation & Democracy (LURD), rising through the ranks and fighting against Charles Taylor's regime. Most stories focus implicitly or explicitly on the "strangeness"" of women in armed combat, highlighting the disconnect between gendered expectations and reality. The image of a female rebel with makeup and manicured nails holding an automatic rifle in combat fatigues. But is women's participation in armed rebel movements really so strange? Is it necessarily driven by deep trauma of victimhood or patriarchal threats of an Islamic caliphate? Even many academic studies on women's involvement in armed groups tends to focus on the degree to which it is an aberration. But it is entirely possible that women's involvement in armed conflict is a rational and reasoned decision driven by predictable factors. Whether it is because women, like many men, are ideologically driven to join an insurgency, or because the group promises opportunities that mainstream society does not, perhaps women join rebel groups for relatively similar and predictable reasons.
+
+This analysis seeks to test the assumption that women's involvement in non-state armed groups can be accurately predicted based on a limited number of group-level variables. We hypothesize that there are similar characteristics of armed groups that make them more or less conducive to having women join their ranks. Additionally, we test some state/conflict level variables to see if there are other important external factors that drive women to join armed movements. Developing such a predictive model is useful both for state security concerns and for issues of gender equality. Understanding what drives a significant portion of the population to join an armed group or not is invaluable data for states battling insurgencies. Additionally, the notion that female soldiers are an aberration arguably results from and perpetuates deep-seated gender stereotypes. By showing that women's participation in armed insurgencies is predictable and consistent, it may help breakdown gendered assumptions about women in conflict.
+
+
+**Description of the Data**
+
+Using an original data set of 170 armed civil conflicts globally from 1947 to 2016, I attempt to develop and test several predictive models regarding women's decision to take up arms in civil conflict. This data set is the result of exhaustive secondary source material searches including media reports, IGO/NGO reports, and scholarly works on specific conflicts. This rich qualitative data drawn from numerous sources for each conflict were coded to capture multiple aspects of the nature and degree of women's participation in armed conflict. This sample of violent conflicts is selected based on two criteria. First it is limited to cases that meet the definition of armed conflict developed by Upsalla Conflict Data Program (UCDP), which is "a contested incompatibility that concerns government and/or territory where the use of armed force between two parties, of which at least one is the government of a state, results in at least 25 battle-related deaths in one calendar year." Second, it is limited to armed groups with "maximalist" goals of overthrowing the existing regime, expelling foreign occupations, or achieving self-determination at some point during the campaign, a criteria based on the Nonviolent and Violent Campaigns and Outcomes (NAVCO) data set developed by Chenoweth and Lewis (2013). As women's participation on the side of the state is largely dependent upon national policies regarding women's participation in armed forces, coding focused only upon the non-state armed groups involved in the conflict.
+
+This original data set measures women's active participation as a 4-point range, with 0 being "not-present,"" 1 being "limited"" (<25%), 2 being "moderate"" (25%-50%), and 3 being "extensive"" (women make up greater than 50% of armed combatants). In addition, the data captures a number of descriptive features of each conflict utilizing binary measures to indicate the presence or absence of women in passive roles and/or in leadership roles, whether or not women were reportedly coerced or voluntary participants, if women's groups were active members of the non-state armed group, whether the armed group espoused gender inclusive or exclusive ideology explicitly, whether women's issued factored among the groups major demands or objectives, and whether gender-based violence was reported within or against the armed group. The data set covers all conflicts that occurred between 1947 and 2016 globally, fitting the aforementioned criteria of maximalist groups engaged in armed civil conflict based on the NAVCO and UCDP data sets.
+
+The non-state armed groups covered in this data set incorporated women to widely varying degrees and in diverse ways. For instance, in Sri-Lanka the Liberation Tigers of Tamil Eelam (LTTE), a militant group of the ethnic Tamil minority, which waged a violent war against the state from 1972-2009, incorporated women to a large degree throughout the prolonged conflict. In sharp contrast to the relatively patriarchal nature of main-stream Sri-Lankan society, the LTTE was exceptionally egalitarian, not just incorporating women into the movement in all capacities, but also advocating for gender equality and women's rights. Women composed 25-30% of armed combatants, and made up one-quarter of its central leadership committee, while a designated Women's Front, established gender-specific goals for the movement. In contrast, the Lord's Resistance Army (LRA), which waged war on the Ugandan state from 1986-2015, not only relegated women to secondary status within its rank, but also was responsible for egregious abuses of women and girls. In the course of its long campaign against the state, the LRA notoriously pillaged the Ugandan countryside, abducting as many as 20,000 girls to fill its ranks. Within the LRA there was a strict gender hierarchy, excluding women from leadership roles and leaving them vulnerable to rampant sexual and physical abuse within the group. While some women and girls were forced into armed combat roles, most served as porters, cooks, nurses, war brides, and sex slaves. What factors account for such vast differences in regard to women's participation as armed combatants in such conflicts? What factors led women to voluntarily join armed conflicts or dissuaded women from participating entirely?
+
+
+**Theoretical Model**
+
+The purpose of this paper is to develop a viable predictive model to help determine what internal aspects of a non-state armed group make it most conducive to women's active participation. As this is a largely unexplored area of research, the first part of this paper is somewhat exploratory. We consider a number of independent variables that might be important and systematically test their impact in a linear model to determine which ones are most useful. After determining the most promising model, we then apply a number of tests to determine the statistical strength of the predictive model and to help ensure that it does indeed have reasonable explanatory power.
+
+Based on preliminary data analysis and existing literature, there are several group-level factors that are likely important drivers of women's participation in armed combat roles. First, based on my own initial analyses, there appears to be a general temporal trend, suggesting that ceteris parabus conflicts happening more recently tend to incorporate women in combat roles to a higher degree. This intuitively makes sense as gender equality has become an increasingly salient global issues and as women's participation in the formal economy and government has increased overall with time, it is reasonable to expect the same dynamic to apply to armed conflict. In addition, it appears that conflicts of longer duration tend to incorporate more women as well perhaps by virtue of being more stable and entrenched movements or due to the fact that, as Loken (forthcoming) suggests, women's participation tends to make armed groups more successful and thus their campaigns tend to endure for longer periods. Another important indicator is likely the fact that women voluntarily join a movement as opposed to solely being forced or coerced to join. While there are instances of women engaging in active combat and even entering leadership roles after being forced or coerced into joining, we believe that women are more likely to engage more fully in an armed group when their participation in voluntary. Voluntary participation suggests that they are ideologically committed to the movement, and therefore perhaps more willing to take up arms and more likely join the ranks of leadership. It is important to note that voluntary participation is not mutually exclusive with coerced participation. Therefore, there are some movements in which some women were forced or coerced into participating, while others voluntarily joined.
+
+Wood and Thomas (2017) recently demonstrated that group ideology matters greatly as well. In particular, they find that Leftist groups tend to incorporate women to much higher degrees, while Islamist groups tend to incorporate fewer or entirely exclude women. Extending from this, we suggest that other ideological factors are likely also important, such as whether or not the armed group expresses gender-inclusive ideology, whether or not women's issues factor among the campaign's primary demands, and whether or not any formal women's groups or women's wings were incorporated into the movement. Finally, based on preliminary analysis of the data, it seems that women tend to participate in higher numbers when state forces have been involved in violence against women associated with the armed groups. This again makes intuitive sense both in so far as joining armed groups might be a form of retaliation against state violence and that if the state is perceived as a threat to women, they may join armed groups in larger numbers as a form of safety and security. Thus, for our model, the time and duration of campaigns, as well as campaign ideology broadly construed and the presence or absence of state violence against women to be the best predictors of whether or not women choose to take up arms in civil conflicts. The bulk of this project seeks to operationalize and test the validity of this predictive model.
+
+
+**Setup**
+
+To begin, we load the necessary r packages for data analysis:
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library("tidyverse")
+library("readr")
+library("broom")
+library("texreg")
+library("leaps")
+```
+
+
+Next, we load the data file used in this analysis:
+```{r}
+women_combatants <- read_csv("data/Women_Combatants_Data_r_503.csv", 
+    skip = 1)
+
+women_combatants <- women_combatants %>% mutate(duration = duration + 1)
+```
+
+
+Since we are ultimately interested in the degree of women's participation and engagement in armed groups, we create an aggregate variable characterizing the robustness of women's participation. This dependent variable, known as the "active_score" ranges from 0 to 5 and captures the relative number of women engaged in active combat, whether or not women were engaged in non-combat support roles, and whether or not women made up any positions within the central leadership.
+
+To create the active_score we perform the following:
+```{r}
+women_combatants <- women_combatants %>%
+  mutate(active_score = extent_active + passive_roles + leadership)
+```
+
+
+Since our theory indicates that women's participation in armed movements tends to increase over time, we create a "time_elapsed" variable, which quantifies the number of years that have passed since our first observation in 1947. Our assumption is that all other things being equal, as this time elapsed variable increases, meaning more time has passed since 1947, we should see an increase in women's participation in armed movements.
+
+To create this time elapsed variable we perform the following:
+```{r}
+women_combatants <- women_combatants %>%
+  mutate(time_elapsed = end_year - 1947)
+```
+
+In order to make some temporal comparisons easier, we also create a new data column of dates aggregated by decade:
+```{r}
+women_combatants <- women_combatants %>%
+    mutate(decade = case_when(end_year %in% 1940:1949 ~ "1940s",
+                              end_year %in% 1950:1959 ~ "1950s",
+                              end_year %in% 1960:1969 ~ "1960s",
+                              end_year %in% 1970:1979 ~ "1970s",
+                              end_year %in% 1980:1989 ~ "1980s",
+                              end_year %in% 1990:1999 ~ "1990s",
+                              end_year %in% 2000:2009 ~ "2000s",
+                              end_year %in% 2010:2019 ~ "2010s"))
+```
+
+
+**Exploratory Analysis of the Predictive Model**
+
+In order to begin determining the best predictive model, we first test the full model incorporating all independent variables theoretically justified for inclusion in our model:
+```{r}
+full <- lm(active_score ~ voluntary + coerced + issues_central + gender_inclusive +
+             womens_groups + violence_against + duration + time_elapsed + leftist, data = women_combatants)
+
+tidy_full <- tidy(full)
+
+tidy_full
+```
+Based on this full model, we see that the strongest predictor by far is the voluntary participation variable. This makes intuitive sense, as women voluntarily joining a movement, suggests that they are ideologically dedicated to the cause and thus more likely to engage in all facets of the campaign. Similarly, groups that are open to women to begin with are more likely to have women voluntarily join their ranks. In this case, the presence of women's voluntary participation in an armed movement increases the extent of women's participation by `r round(tidy_full$estimate[2], 2)` points on the active score index.
+
+Having identified voluntary participation as the most significant predictor, we can use this independent variable as the simplest iteration of our predictive model, with the following equation:
+$$
+{active\:score} = \beta_0 + \beta_1{voluntary} + \epsilon
+$$
+
+
+However, we also see that women's issues being central to the campaign's demands, gender inclusive ideology, the presence of women's groups, and reported cases of violence against women by the state are all reasonably strong indicators as well. While, surprisingly, the duration, time elapsed, leftist ideology are not strong predictors. To better assess which of these variables merit inclusion in a more comprehensive model, we use the leaps package to test each combination of independent variables and determine the best model. While there is some debate about the merits of applying this approach, given that all of our variables are already limited to those that are theoretically justified for inclusion, this automated approach to optimal model generation is the most efficient way to determine the strongest and most succinct model.
+
+```{r}
+best_model <- regsubsets(active_score ~ voluntary + issues_central + gender_inclusive +
+             womens_groups + violence_against + duration + time_elapsed + leftist, data = women_combatants, nvmax= 8, really.big = TRUE)
+
+summary(best_model)
+```
+Based on this output, we can see the which variables are the strongest predictors in order from most to least impact.
+
+We can also quickly determine the optimal model based on which combination will provide the highest adjusted R-squared value with the following commands:
+```{r}
+res.sum <- summary(best_model)
+
+data.frame(
+  adj.R2 = which.max(res.sum$adjr2),
+  CP = which.min(res.sum$cp),
+  BIC = which.min(res.sum$bic)
+)
+```
+In addition to displaying the optimal number of independent variables based on adjusted R-squared, this output also shows the optimal number based on Mallows Cp and the Bayesian Information Criteria, both of which add penalties for including additional variables in the model. Based on these metrics, it appears that a model utilizing between four and six of the strongest independent variables will be best.
+
+
+**Identification of Ideal Model**
+
+In order to manually verify the best model, we test the merits of each additional variable by assessing the relative change in adjusted R-squared, up to the highest value, which our previous test indicates will be achieved with the inclusion of 6 variables. This means that leftist ideology and duration will not be included in any of the models, as their inclusion actually begin to decrease the strength of the model.
+```{r}
+Mod1 <- lm(active_score ~ voluntary, data = women_combatants)
+
+Mod1_r <- glance(Mod1)
+```
+Our simplest model using only voluntary participation as the independent variable yields an adjusted R-squared value of `r round(Mod1_r$adj.r.squared, 2)`
+
+
+```{r}
+Mod2 <- lm(active_score ~ voluntary + gender_inclusive, data = women_combatants)
+
+Mod2_r <- glance(Mod2)
+```
+The inclusion of a second independent variable, gender inclusive ideology, increases the adjusted R-squared value to `r round(Mod2_r$adj.r.squared, 2)`, and increase of `r round(sum(Mod2_r$adj.r.squared - Mod1_r$adj.r.squared), 2)`.
+
+
+```{r}
+Mod3 <- lm(active_score ~ voluntary + gender_inclusive + womens_groups, data = women_combatants)
+
+Mod3_r <- glance(Mod3)
+```
+The inclusion of a third independent variable, women's groups, increases the adjusted R-squared value to `r round(Mod3_r$adj.r.squared, 2)`, and increase of `r round(sum(Mod3_r$adj.r.squared - Mod2_r$adj.r.squared), 2)`.
+
+
+```{r}
+Mod4 <- lm(active_score ~ voluntary + gender_inclusive +  womens_groups + violence_against, data = women_combatants)
+
+Mod4_r <- glance(Mod4)
+```
+The inclusion of a third independent variable, women's groups, increases the adjusted R-squared value to `r round(Mod4_r$adj.r.squared, 2)`, and increase of `r round(sum(Mod4_r$adj.r.squared - Mod3_r$adj.r.squared), 2)`.
+
+
+```{r}
+Mod5 <- lm(active_score ~ voluntary + gender_inclusive + womens_groups + violence_against + issues_central, data = women_combatants)
+
+Mod5_r <- glance(Mod5)
+```
+The inclusion of a third independent variable, women's groups, increases the adjusted R-squared value to `r round(Mod5_r$adj.r.squared, 2)`, and increase of `r round(sum(Mod5_r$adj.r.squared - Mod4_r$adj.r.squared), 2)`, at this point the marginal return of adding more variables seems to have plateaued, but it is worth testing one additional variable to confirm.
+
+
+```{r}
+Mod6 <- lm(active_score ~ voluntary + gender_inclusive + womens_groups + violence_against + issues_central + time_elapsed, data = women_combatants)
+
+Mod6_r <- glance(Mod6)
+```
+The inclusion of a third independent variable, women's groups, increases the adjusted R-squared value to `r round(Mod6_r$adj.r.squared, 2)`, and increase of `r round(sum(Mod6_r$adj.r.squared - Mod5_r$adj.r.squared), 2)`. At this point adding a sixth variable produces a negligible increase in the adjusted R-squared value and anything beyond this point would actually begin to decrease the strength of the model.
+
+
+We can visualize the performance of each model side by side in a regression table as follows:
+```{r}
+screenreg(list(Mod1, Mod2, Mod3, Mod4, Mod5, Mod6))
+```
+
+The model with five independent variables seems to be the best model balancing a high adjusted R-squared, without adding two many variables to the model, which would be penalized by metrics like Mallows Cp or BIC. However, several of the ideology variables are fairly correlated. Namely, gender inclusive ideology, women's issues being central to a campaign's demands, and the presence of women's groups. All of these are related in so far as they similarly reflect an ideological environment that is inclusive of women. As such, we might try to further simplify the model, by combining these into an aggregate score. By doing so we may lose some nuance in regard to the relative impact of each individual variable as they will all be equally weighted in the aggregate, but the trade off of simplifying the model may be worth it.
+
+
+To construct an aggregate score combining these three variables on a 0 to 3 scale to indicate how "welcoming" a group is to women, we perform the following:
+```{r}
+women_combatants <- women_combatants %>%
+  mutate(welcoming = issues_central + gender_inclusive + womens_groups)
+```
+
+
+We can then incorporate this variable into a simplified version of Model 5 and test it:
+```{r}
+Mod5_simple <- lm(active_score ~ voluntary + welcoming + violence_against, data = women_combatants)
+
+Mod5_simple_r <- glance(Mod5_simple)
+```
+The simplified model results in an adjusted R-squared value to `r round(Mod5_simple_r$adj.r.squared, 2)`. Compared to the original Model 5, the simplified version actually performs slightly better, and results in an increase to the adjusted R-squared value by `r round(sum(Mod5_simple_r$adj.r.squared - Mod5_r$adj.r.squared), 3)`.
+
+
+We now have a predictive models which we can further test to determine if it is accurate and useful.
+What seems to be the optimal simplified Model 5, uses voluntary participation, welcoming ideology, and violence against women by the state as the independent variables.
+
+We can use the following equation for our optimal model:
+$$
+{active\:score} = \beta_0 + \beta_1{voluntary} + \beta_2{welcoming} + \beta_3{violence\:against} + \epsilon
+$$
+
+
+Let's rename this to "best" model:
+```{r}
+best <- lm(active_score ~ voluntary + welcoming + violence_against, data = women_combatants)
+
+tidy_best <- tidy(best)
+
+tidy_best
+```
+
+
+**Cross-Validation & Testing of the Model**
+
+Now that we have identified what seems to be the best predictive model, we can run a series of Cross-Validation tests to determine the predictive strength of the model.
+
+Held-out Data is a useful method of cross-validation that typically holds out 30% of the data for testing, while using the remaining 70% to train the data. It is a way of comparing the predictive power of the model in the sample of trained data against the out-of-sample test data. We can apply this cross-validation method as follows:
+```{r}
+n_test <- round(0.3 * nrow(women_combatants))
+
+n_train <- nrow(women_combatants) - n_test
+
+mod_train <-
+  lm(active_score ~ voluntary + welcoming + violence_against,
+     data = head(women_combatants, n_train))
+
+
+in_RMSE <- sqrt(mean(mod_train$residuals ^ 2))
+
+outsample <- augment(mod_train, newdata = tail(women_combatants, n_test))
+
+out_RMSE <- sqrt(mean( (outsample$active_score - outsample$.fitted) ^ 2))
+```
+Based on the Held-out data method, we find that the in-sample Root Mean Squared Error (RMSE) is `r round(in_RMSE, 2)`, while the out-of-sample RMSE is `r round(out_RMSE, 2)`. The out-of-sample RMSE is a bit larger, with a difference of `r round(sum(out_RMSE - in_RMSE), 2)`, but not enough to reject the model. While an out-of-sample RMSE that is much higher than an in-sample RMSE usually indicates that the model is not a very good predictor, in this case the difference is so low it is likely due to chance or small variations in the data.
+
+
+Another useful method of verifying the predictive strength of our model is K-Fold Cross-Validation. This is a somewhat more robust approach than the held-out data method as it repeats the train/test split several times and then compare the results. To implement this method we first divide the data into 10 k-folds and apply the train/test approach to assess the predictive strength of the model:
+```{r}
+cv <- modelr::crossv_kfold(women_combatants, k = 10)
+
+folds <- cv %>%
+  mutate(model = map(train, ~ lm(active_score ~
+        voluntary + welcoming + violence_against,data = women_combatants)))
+
+predicted <-
+  folds %>% unnest(map2(model, test, ~augment(.x, newdata = .y)))
+
+predicted <- predicted %>%
+  mutate(residual = .fitted - active_score)
+
+predicted %>%
+  ggplot(aes(active_score, residual)) +
+  geom_hline(yintercept = 0) +
+  geom_point() +
+  stat_smooth(method = "loess") +
+  theme_minimal()
+```
+Based on this output, our model might be over predicting active scores below 3 and under predicting active scores of 3 and above. For the most part, however, predicted values only vary by one point, indicating this is still a reasonably accurate predictive model.
+
+
+Now that we are reasonably certain based on two cross-validation methods that this predictive model is valid, we can double check the data to ensure that we are not missing any important variables or that the model is not being strongly influenced by outliers.
+
+First, we run an omitted variables bias test comparing the base and best model to determine whether we might be missing any important variables:
+```{r}
+OMVB <- lm(active_score ~ voluntary, data = women_combatants)
+summary(OMVB)
+
+OMVB_full <- lm(active_score ~ voluntary + welcoming + violence_against, data = women_combatants)
+summary(OMVB_full)
+
+betaR <- OMVB$coefficients[2]
+betaF <- OMVB_full$coefficients[2]
+
+OMVB_score <- betaF/(betaR-betaF)
+```
+In this case, the Omitted Variables Bias estimate is `r round(OMVB_score, 2)`, which indicates that the influence of unobservable variables would need to be more than 3.2 times greater than the influence of observable variables, those included in the model, in order to explain away the total effect. Based on this estimate, we can be reasonably assured that there are not major unobserved variables influencing these results and that we do not need to account for other variables in this model in order to explain the correlation.
+
+
+To assess the relative impact of outliers on our model, it is useful to construct an influence plot, which helps visualize the number and relative strength of outliers as well as their impact on the model. To do this, we first calculate the standardized hat-values and standardized residuals of the data using the following:
+```{r}
+hatvalues <- hatvalues(best)
+hatscore <- hatvalues(best)/mean(hatvalues(best))
+
+rstudent <- rstudent(best)
+```
+
+
+We then construct an influence plot to visualize the relative number and strength of outliers:
+```{r}
+plot(hatscore,rstudent, xlab="Standardized hat-values", ylab="Studentized Residuals",
+main="Influence Plot")
+abline(h=c(-2,2), lty=2)
+abline(v=c(2,3), lty=c(2,3))
+```
+Only one observation appears to exceed the 3.0 threshold for standardized hat-values, though a few are on the border of the lower threshold of 2.0. A number of observations do appear to exceed the +2 and -2 thresholds for studentized residuals, but most fall within the acceptable ranges. This indicates that the relative influence of outliers is low overall and we can be reasonably assured that the results are not significantly distorted by outliers.
+
+
+One useful way of visualizing and assessing the data is to create a prediction plot, which shows the predicted median value of the independent variables based on this model. We can create a prediction plot showing the median values of our independent variables grouped by region and decade, with the confidence intervals displayed at the 95% level as follows:
+```{r}
+medians <- women_combatants %>%
+  group_by(decade, region) %>%
+  summarise_at(vars(voluntary, welcoming, violence_against), median, na.rm=TRUE) 
+
+CI <- tidy(predict(best, newdata=medians, interval="confidence", level=0.95))
+dataCI <- bind_cols(medians, CI)
+
+ggplot(data=dataCI) +
+  geom_pointrange(aes(x=decade, y=fit, ymin=lwr, ymax=upr, color = factor(region))) +
+   theme(axis.text.x=element_text(angle = 45, hjust = 1))
+```
+This visualization helps show in what regions and in what decades we expect to find higher or lower median values of our independent variables, and thus correspondingly higher or lower degrees of women's participation in non-state armed groups. This plot is useful for determine general trends in the data and as before identifying potentially outlying cases. From this we can see that there is a general increasing trend in the number of armed groups over time that have conditions conducive to higher levels of women's participation. But there are several outliers, primarily in the Middle East and Europe that might influence the strength of linear relationship over time. We can also see that generally speaking, conflicts in South America, as well as Central America/Caribbean tend to have movements more conducive to women's participation, while the Middle East generally has less armed groups that are less conducive.
+
+
+**Conclusion**
+
+The predictive model developed and tested in this analysis provides a potentially useful tool for future research as well as providing some useful information for policy makers and national leaders. For those concerned with state security issues, women's participation in non-state armed groups should be a factor to consider in anti-insurgency efforts. As Loken (forthcoming) has found, women's participation in non-state armed groups substantially increases the efficacy and longevity of non-state armed groups. Thus, if women are dissuaded from engaging with insurgent groups, it stands to reason that they will tend to be less effective. Of particular note in this regard is the fact that state violence against women, particularly those from the same communities or ethnicities of insurgent groups, is one of the leading predictors of women's participation. We can glean from this that it is in the state's best interest to refrain from engaging in physical and sexual violence against women. In addition, we can conclude from this analysis that non-state armed groups with ideology and practices that are welcoming to women are more likely to have more women among their ranks and contributing in a greater variety of ways. While the causal directionality of this correlation is certainly debatable, we can infer that states should be wary of armed groups espousing such gender-inclusive ideology and actively attempting to incorporate women into their ranks. Once again, Loken (forthcoming) points out that armed groups often adopt gender inclusive ideology as a strategy to attract women and gain their support. Similarly, as women's voluntary participation is strongly linked with a greater degree and extent of involvement in armed groups, any efforts that the state can make to dissuade women from joining insurgent groups will likely help undermine their strength. There is some evidence from Berman, Shapiro, and Felter (2011) that state investment in public goods can in fact dissuade women and other community members from joining or supporting insurgencies.
+
+While this predictive model is informative and potentially useful for further research and policy interventions, there are certainly limitations in this model that must be addressed. First of all is the question of causality. This model does not say anything about the causal direction of the independent and dependent variables. While the independent variables selected are strongly correlated with women's active involvement in armed groups, it is not clear to what extent these group-level factors compel women to join or to what extent women members who join for other reasons drive these group-level factors. For the purpose of this predictive model, the causal direction is not necessarily important. However, in order to understand the dynamics driving women's participation in armed conflict further study is needed and ideally some form of causal inference would be applied to shed further light on the subject. In addition, the nature of the 5-point active score index for women in conflict is limited by the relative lack of nuance. While it captures broad gradations of women's involvement, it does not account for more granular and often important variations. Most notably this is true of the "passive participation" variable included in the aggregate score. This variable captured everything from forced sexual slavery to tactical espionage. Therefore, there were a wide variety of so-called "passive" support roles, some which amounted solely to women's victimization, and others where such contributions often greatly contributed to an armed groups efficacy. Further studies on the subject of women's engagement in armed conflict would ideally account for such variations with more nuanced variables around women's support roles.
+
+In any case, this predictive model shows that women's involvement in civil conflicts is complex. Surprisingly, the duration of conflict has little correlation with the extent of women's participation, suggesting that there are important group-level factors driving or preventing women's engagement in armed groups. Similarly, while there is a weak trend towards more women being involved in armed groups, it is not a strong correlation further suggesting that group-level variation is key to understanding what motivates women to join or not. Finally, in contradiction to the recent work by Thomas & Woods (2017), we found that Leftist ideology was not only not a significant predictor of women's involvement, but that it actually weakens the explanatory strength of our model. This suggests that there may be other ideological or group-level factors at work, and that Thomas & Woods (2017) conclusions about Leftist ideology were actually driven by some other factors. One thing our predictive model emphatically demonstrates is just how little is understood about women's involvement in armed conflict. While this predictive model is a useful step, considerably more work is needed if we are to understand how and why women are driven to join armed insurgencies.
+
+```{r}
+only_coerced <- women_combatants %>% filter(coerced == 1)
+
+only_voluntary <- women_combatants %>% filter(voluntary == 1)
+
+```
+
