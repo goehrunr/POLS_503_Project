@@ -1,5 +1,5 @@
-# POLS_501_Project
-This is the data and R markdown file for the final project completed for Quantitative Research Methods
+# POLS_503_Project
+This is the data and R markdown file for the final project completed for Advanced Quantitative Research Methods
 
 # Ryan Goehrung - Final Project
 
