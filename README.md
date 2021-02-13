@@ -1,7 +1,7 @@
 # POLS_503_Project
 This is the data and R markdown file for the final project completed for Advanced Quantitative Research Methods
 
-# Ryan Goehrung - Final Project
+Ryan Goehrung
 
 # Women as Peacemakers? Analyzing the Extent of Women's Armed Combat Role in Civil Conflicts
 
@@ -19,4 +19,4 @@ The necessary data set is included in this repository. No other data is necessar
 
 
 # Organization
-The most important file for replication in this repository is the r-markdown file titled Final_Project_Women_Combatants. This r-markdown document contains all necesary instructions and documentation for replication. The original data set used for this analysis is found in the folder entitled data. The relevant csv file is titled Women_Combtantas_Data_r
+The most important file for replication in this repository is the r-markdown file titled Final_Project_Women_Combatants_503. This r-markdown document contains all necesary instructions and documentation for replication. The original data set used for this analysis is found in the folder entitled data. The relevant csv file is titled Women_Combtantas_Data_r_503
